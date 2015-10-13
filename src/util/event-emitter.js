@@ -7,7 +7,8 @@ export class EventEmitter{
   _subject = new Subject();
 
   observer(generator){
-    return this._subject.subscribe(
+    return this._subject
+      .subscribe(
         value => setTimeout(() => generator.next(value)),
         error => generator.throw ? generator.throw(error) : null,
         () => generator.return ? generator.return() : null
