@@ -10,7 +10,7 @@
   "scripts": {
     "test": "gulp test",
     "prepublish": "gulp test",
-    "bundle": "browserify -t [ babelify --stage 0 ] ./src/index.js --standalone ng-forward -i reflect-metadata -x rx-lite | derequire > ./ng-forward.js"
+    "bundle": "browserify -t [ babelify --stage 0 ] ./src/index.js --standalone ng-forward -i reflect-metadata | derequire > ./ng-forward.js"
   },
   "keywords": [
     "angular",
@@ -60,7 +60,8 @@
     "uglifyjs": "^2.4.10"
   },
   "dependencies": {
-    "metawriter": "^1.0.0",
-    "rx-lite": "^4.0.1"
+    "@reactivex/rxjs": "^5.0.0-alpha.3",
+    "extend": "^3.0.0",
+    "metawriter": "^1.0.0"
   }
 }
